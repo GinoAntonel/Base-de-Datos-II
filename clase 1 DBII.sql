@@ -23,9 +23,7 @@ ALTER TABLE film
 	ADD last_update DATE;
 ALTER TABLE actor
 	ADD last_update DATE;
-#ALTER TABLE film_actor
-#	ADD CONSTRAINT fk_actor_id FOREIGN KEY (actor_id) REFERENCES actor (actor_id)
-#	ADD CONSTRAINT fk_film_id FOREIGN KEY (film_id) REFERENCES film (film_id)
+
 
 INSERT INTO imdb.actor
 (first_name, last_name, last_update)
