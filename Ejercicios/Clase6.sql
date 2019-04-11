@@ -57,8 +57,8 @@ WHERE actor_id IN(SELECT actor_id
 -- 8 List all the actors that didn't work in 'BETRAYED REAR' or 'CATCH AMISTAD'	
 SELECT first_name, last_name
 FROM actor
-WHERE actor_id IN(SELECT actor_id
+WHERE actor_id NOT IN(SELECT actor_id
 				FROM film_actor INNER JOIN film USING (film_id)
-				WHERE film.title <> 'BETRAYED REAR' OR film.title <> 'CATCH AMISTAD')
+				WHERE film.title = 'BETRAYED REAR' OR film.title = 'CATCH AMISTAD')
 				
 				
