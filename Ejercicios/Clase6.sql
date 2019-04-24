@@ -6,7 +6,8 @@ WHERE EXISTS (SELECT *
 				WHERE a1.last_name = a2.last_name
 				AND a1.actor_id <> a2.actor_id
 				ORDER BY a1.last_name)
-				
+
+
 -- 2 Find actors that don't work in any film
 SELECT first_name
 FROM actor
